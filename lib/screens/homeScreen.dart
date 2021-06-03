@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'package:banking_app/widgets/expensesTile.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -87,9 +89,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     RichText(
                       text: TextSpan(
-                        style: TextStyle(
-                          height: 1.35
-                        ),
+                        style: TextStyle(height: 1.35),
                         children: [
                           TextSpan(
                             text: "Spent\n",
@@ -149,30 +149,30 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      /* ExpensesTile(
-                        image: "",
+                      ExpensesTile(
+                        image: "assets/images/Vector.png",
                         title: "Netfilx",
                         paymentDate: "27 April 2021",
                         cost: 7.99,
                       ),
                       ExpensesTile(
-                        image: "",
+                        image: "assets/images/Vector.png",
                         title: "Shopify",
                         paymentDate: "02 May 2021",
                         cost: 14.99,
                       ),
                       ExpensesTile(
-                        image: "",
+                        image: "assets/images/Vector.png",
                         title: "Uber",
                         paymentDate: "10 May 2021",
                         cost: 5.64,
                       ),
                       ExpensesTile(
-                        image: "",
+                        image: "assets/images/Vector.png",
                         title: "Dropbox",
                         paymentDate: "03 June 2021",
                         cost: 7.18,
-                      ), */
+                      ),
                     ],
                   ),
                 ),
@@ -185,71 +185,4 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class ExpensesTile extends StatelessWidget {
-  final String image;
-  final String title;
-  final String paymentDate;
-  final double cost;
 
-  const ExpensesTile({
-    Key? key,
-    required this.image,
-    required this.title,
-    required this.paymentDate,
-    required this.cost,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(14.0)),
-          image: DecorationImage(
-            image: AssetImage(image),
-          ),
-        ),
-      ),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontSize: 16.0,
-        ),
-      ),
-      subtitle: RichText(
-        text: TextSpan(
-          children: [
-            TextSpan(
-              text: "next payment\n",
-              style: TextStyle(
-                color: Color(0xFF6F8099),
-              ),
-            ),
-            TextSpan(
-              text: paymentDate,
-              style: TextStyle(
-                color: Color(0xFF030710),
-              ),
-            ),
-          ],
-        ),
-      ),
-      trailing: RichText(
-        text: TextSpan(children: [
-          TextSpan(
-            text: "\$ ",
-            style: TextStyle(
-              color: Color(0xFF6F8099),
-            ),
-          ),
-          TextSpan(
-            text: "$cost",
-            style: TextStyle(
-              color: Color(0xFF030710),
-            ),
-          ),
-        ]),
-      ),
-    );
-  }
-}
