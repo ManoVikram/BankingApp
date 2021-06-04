@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import './screens/homeScreen.dart';
+import './screens/cardInfoScreen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -32,7 +33,8 @@ class Banking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomeScreen(),
+      // body: HomeScreen(),
+      body: CardInfoScreen(),
     );
   }
 }
