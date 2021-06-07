@@ -22,7 +22,7 @@ class ExpensesTile extends StatelessWidget {
         borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
-        child: Image.asset(
+        child: Image.network(
           image,
           height: 700.0,
           width: 70.0,
