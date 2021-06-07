@@ -33,8 +33,8 @@ class Banking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: HomeScreen(),
-      body: CardInfoScreen(),
+      body: HomeScreen(),
+      // body: CardInfoScreen(),
     );
   }
 }

@@ -22,6 +22,7 @@ class PaymentCard extends StatelessWidget {
     return Container(
       height: 260,
       width: 200,
+      margin: EdgeInsets.only(right: 20.0),
       padding: EdgeInsets.all(18.0),
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(24.0)),
@@ -37,7 +38,7 @@ class PaymentCard extends StatelessWidget {
                 ],
               )
             : null,
-        color: isPrimary ? Colors.white : null,
+        color: isPrimary ? null : Colors.white,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
